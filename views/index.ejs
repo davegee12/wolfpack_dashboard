@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Wolfpack</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>The Wolfpack!!!</h1>
+                    <a href="/new">Add to the pack!</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <% for (var a of all_wolves) { %>
+                    <h3><%= a.name %></h3>
+                    <a href="/wolfpack/<%= a.id %>"><img src="./images/<%= a.image %>" alt="<%= a.name %>"></a>
+                    <a href="/wolfpack/destroy/<%= a.id %>">Delete wolf</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

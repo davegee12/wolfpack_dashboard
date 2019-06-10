@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>New Wolf</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Add a Wolf to the pack!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="/wolfpack" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Wolf Name:</label>
+                        <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Gender:</label>
+                        <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="male or female">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Position:</label>
+                        <textarea name="position" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Image:</label>
+                        <input name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter image">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add my wolf!</button>
+                </form>
+                <a href="/quotes">Skip to quotes!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

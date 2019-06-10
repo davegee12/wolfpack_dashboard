@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Edit Wolf</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Update <%= wolf.name %></h1>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col">
+                    <img src="/images/<%= wolf.image %>" alt="<% wolf.name %>">
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                <form action="/edit" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Wolf Name:</label>
+                        <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            value="<%= wolf.name %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Gender:</label>
+                        <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        value="<%= wolf.gender %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Position:</label>
+                        <textarea name="position" class="form-control" id="exampleFormControlTextarea1" rows="3" value="<%= wolf.position %>"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Image:</label>
+                        <input name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        value="<%= wolf.image %>">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update my wolf!</button>
+                </form>
+                <a href="/">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
